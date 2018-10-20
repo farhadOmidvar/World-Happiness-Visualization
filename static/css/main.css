@@ -1,0 +1,38 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+option{
+	background-color: black;
+}
+
+.banner-text h1{
+	font-family: "Source Sans Pro";
+	color: #ffffff;
+	font-size: 53px;
+	letter-spacing: 10px;
+	font-weight: 600;
+}
+
+.banner {
+	background-image: url('https://www.pixel-creation.com/wp-content/uploads/mg0007-night-sky-with-twinkling-stars-animated-background-motion-1.png');
+	min-height: 750px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+}
+
+.banner-text {
+	padding-top: 2%;
+}
+
+.custom-select{
+	width: 20%;
+	margin-bottom: 30px;
+	color: #fff;
+	background:url('https://www.pixel-creation.com/wp-content/uploads/mg0007-night-sky-with-twinkling-stars-animated-background-motion-1.png');
+}
+
+
+
