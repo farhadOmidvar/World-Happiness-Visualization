@@ -33,6 +33,10 @@ Countries = Base.classes.countries
 def index():
 	return render_template("index.html")
 
+@app.route("/years")
+def years():
+	return jsonify(['2015','2016','2017'])
+
 @app.route("/countries")
 def countries():
 	countries_sel = [Countries.country,Countries.code]
@@ -78,9 +82,9 @@ def countries_happiness_year(year):
 
 
 	happiness_year_data_list = []
-	happiness_country_data = {}
 	for result in year_results:
 		happiness_year_data = {}
+		happiness_year_data['Country']= result[1]
 		happiness_year_data['Code'] = result[11]
 		happiness_year_data['country_id'] = result[0]
 		happiness_year_data['HappinessRank'] = result[2]
@@ -94,10 +98,10 @@ def countries_happiness_year(year):
 		happiness_year_data['DystopiaResidual'] = result[10]
 		happiness_year_data['Latitude'] = result[12]
 		happiness_year_data['Longitude'] = result[13]
-		happiness_country_data[result[1]] = happiness_year_data
+		happiness_year_data_list.append(happiness_year_data)
 	
 	
-	return jsonify(happiness_country_data)
+	return jsonify(happiness_year_data_list)
 
 	
 
