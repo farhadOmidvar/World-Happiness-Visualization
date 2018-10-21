@@ -43,12 +43,12 @@ def countries():
 	countries_results = db.session.query(*countries_sel).all()
 
 	countries_name = {}
-	countries_list = []
+	# countries_list = []
 	for result in countries_results:
 		countries_name[result[0]] = result[1]
-		countries_list.append(countries_name)
+		# countries_list.append(countries_name)
 
-	return jsonify({"Data" : countries_list})
+	return jsonify([countries_name])
 
 @app.route("/<year>")
 def countries_happiness_year(year):
