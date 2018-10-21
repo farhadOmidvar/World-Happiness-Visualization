@@ -3,7 +3,7 @@ body {
   margin: 0px;
 }
 
-option{
+#banner-dropdown {
 	background-color: black;
 }
 
@@ -16,11 +16,13 @@ option{
 }
 
 .banner {
-	background-image: url('https://www.pixel-creation.com/wp-content/uploads/mg0007-night-sky-with-twinkling-stars-animated-background-motion-1.png');
+	background-color: #000;
+	/*background-image: url('https://www.pixel-creation.com/wp-content/uploads/mg0007-night-sky-with-twinkling-stars-animated-background-motion-1.png');*/
 	min-height: 750px;
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: cover;
+	margin-bottom: 50px;
 }
 
 .banner-text {
@@ -29,10 +31,21 @@ option{
 
 .custom-select{
 	width: 20%;
+	/*background:url('https://www.pixel-creation.com/wp-content/uploads/mg0007-night-sky-with-twinkling-stars-animated-background-motion-1.png');*/
+}
+
+#selDataset{
+	background-color: #000;
 	margin-bottom: 30px;
 	color: #fff;
-	background:url('https://www.pixel-creation.com/wp-content/uploads/mg0007-night-sky-with-twinkling-stars-animated-background-motion-1.png');
+	/*background:url('https://www.pixel-creation.com/wp-content/uploads/mg0007-night-sky-with-twinkling-stars-animated-background-motion-1.png');*/
 }
 
 
+#table,#gauge,#globe{
+    filter: drop-shadow(1em 1em 1em rgba(0, 0, 0, 0.3));
+}
 
+#globe{
+    filter: drop-shadow(1em 1em 1em rgba(255, 255, 255, 0.7));
+}
