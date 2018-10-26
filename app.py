@@ -3,7 +3,7 @@ import sqlalchemy
 import numpy as np
 import pandas as pd
 from sqlalchemy.orm import Session
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine , func
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.ext.automap import automap_base
 from flask import Flask, jsonify, render_template
@@ -74,6 +74,7 @@ def countries_happiness_year(year):
 		Happiness_year.Code,
 		Happiness_year.Latitude,
 		Happiness_year.Longitude,
+		Happiness_year.Region,
 	]
 
 	year_results = db.session.query(*year_sel).all()
@@ -86,6 +87,7 @@ def countries_happiness_year(year):
 		happiness_year_data = {}
 		happiness_year_data['Country']= result[1]
 		happiness_year_data['Code'] = result[11]
+		happiness_year_data['Region'] = result[14]
 		happiness_year_data['country_id'] = result[0]
 		happiness_year_data['HappinessRank'] = result[2]
 		happiness_year_data['HappinessScore'] = result[3]
@@ -152,6 +154,29 @@ def countries_happiness(year,country):
 		happiness_data['Longitude'] = result[13]
 
 	return jsonify(happiness_data)
+
+@app.route("/region/<year>")
+def region_happiness(year):
+	years ={
+	'2015': Happiness_2015,
+	'2016': Happiness_2016,
+	'2017': Happiness_2017,
+	}
+	Happiness_year = years.get(year)
+
+	avg_region_results = db.session.query(
+		func.avg(Happiness_year.HappinessScore),
+		Happiness_year.Region
+		).group_by(
+		Happiness_year.Region
+		).all()
+
+	avg_region_Happiness ={}
+	for result in avg_region_results:
+		avg_region_Happiness[result[1]] = result[0]
+
+	return(jsonify(avg_region_Happiness))
+		
 
 
 if __name__ =="__main__":
