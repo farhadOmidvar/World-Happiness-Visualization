@@ -1,28 +1,22 @@
-body {
+body{
   padding: 0px;
   margin: 0px;
+  font-family: 'Barlow Condensed' , sans-serif;
 }
 
-#banner-dropdown {
-	background-color: black;
-}
-
-.banner-text h1{
+.header-text {
 	font-family: "Source Sans Pro";
 	color: #ffffff;
-	font-size: 53px;
+	font-size: 30px;
 	letter-spacing: 10px;
-	font-weight: 600;
+	font-weight: 400;
+	margin: 0;
 }
 
 .banner {
-	background-color: #000;
-	/*background-image: url('https://www.pixel-creation.com/wp-content/uploads/mg0007-night-sky-with-twinkling-stars-animated-background-motion-1.png');*/
+	background-image: url('banner.png');
 	min-height: 750px;
-	background-repeat: no-repeat;
-	background-position: center top;
-	background-size: cover;
-	margin-bottom: 50px;
+	margin-top: 40px;
 }
 
 .banner-text {
@@ -30,15 +24,11 @@ body {
 }
 
 .custom-select{
-	width: 20%;
-	/*background:url('https://www.pixel-creation.com/wp-content/uploads/mg0007-night-sky-with-twinkling-stars-animated-background-motion-1.png');*/
-}
-
-#selDataset{
-	background-color: #000;
-	margin-bottom: 30px;
-	color: #fff;
-	/*background:url('https://www.pixel-creation.com/wp-content/uploads/mg0007-night-sky-with-twinkling-stars-animated-background-motion-1.png');*/
+	width: 15%;
+	background-color: rgb(0,0,0);
+	color: rgb(255,255,255);
+	height: 30px;
+	font-size: 80%;
 }
 
 
@@ -48,4 +38,158 @@ body {
 
 #globe{
     filter: drop-shadow(1em 1em 1em rgba(255, 255, 255, 0.7));
+}
+
+#bar-section{
+	background-color: rgba(217, 230, 242,.5);
+	margin-bottom: 50px;
+}
+#bar{
+	margin:auto;
+}
+
+#scatter-section{
+	background-color: rgba(217, 230, 242,.7);
+	margin-bottom: 50px;
+}
+
+#text-section{
+	margin-bottom: 50px;
+}
+#cloud {
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    padding: 30px;
+}
+
+#linearGauge {
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    padding: 30px;
+}
+
+#linearGauge-section{
+	margin-bottom: 50px;
+}
+
+#readmore-section{
+	background-color: rgba(217, 230, 242,.5);
+	margin-bottom: 50px;
+	padding-bottom: 20px;
+}
+
+.aText {
+  font-family: 'Barlow Condensed',sans-serif;
+  font-size: 18px;
+  text-anchor: middle;
+}
+
+.axis-text-main{
+  font-family: 'Barlow Condensed',sans-serif;
+  text-anchor: middle;
+  font-size: 0.75em;
+}
+
+.active {
+  font-weight: bold;
+  fill: #F1574D;
+  transition: fill 0.5s ease-out;
+  text-anchor: middle;
+}
+
+.inactive {
+  font-weight: lighter;
+  fill: #a9a9a9;
+  transition: fill 0.5s ease-out;
+  text-anchor: middle;
+}
+
+.inactive:hover {
+  fill: #000;
+  cursor: pointer;
+}
+
+.countryText {
+  font-family: sans-serif;
+  fill: #fff;
+  text-anchor: middle;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.countryCircle {
+  fill: rgba(39, 78, 114, .8);
+  stroke: #e3e3e3;
+}
+
+.chart {
+  display: block;
+  margin: 0;
+}
+
+
+.d3-tip {
+  padding: 6px;
+  font-size: 12px;
+  line-height: 1;
+  line-height: 1.5em;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+}
+
+footer.footer{
+	background-color:black;
+	color:white;
+	padding: 20px 20px;
+}
+
+.fab {
+	color: white;
+}
+
+.fab:hover {
+    opacity: 0.45;
+}
+
+.header{
+	position: fixed;
+	top: 0px;
+	z-index: 10000;
+	width: 100%;
+}
+
+.header .header-content {
+	margin: auto;
+	padding: 5px;
+	background-color: rgb(0,0,0);
+}
+
+
+.jumbotron{
+	width: 90%;
+	margin:auto;
+	padding: 0;
+	background-color: #fff;
+	border-radius: 0;
+}
+
+
+
+#selection{
+	margin: auto;
+}
+
+#bar-text{
+	padding-top: 20px;
+}
+
+#map{
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
