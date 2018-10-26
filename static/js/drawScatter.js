@@ -1,5 +1,5 @@
 function drawScatter(data){
-	var svgWidth =1150,
+	var svgWidth =1000,
 	svgHeight =650;
 
 	var margin = {
