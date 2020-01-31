@@ -177,7 +177,24 @@ def region_happiness(year):
 
 	return(jsonify(avg_region_Happiness))
 		
+@app.route("/test")
+def test():
+	
 
+	test_data = [
+	["Date","Campaign Domain","Total Sessions","Mobile Sessions","Desktop Sessions","Mobile Sessions %","Distinct IPs",
+	"Distinct Mobile IPs","Distinct Desktop IPs","Distinct Mobile IPs %","Searches","Clicks","Estimated GrossRevenue",
+	"Revenue Per Session","Revenue Per Search","Revenue Per IP","Revenue Per Click","Clicks Per Session %"],
+	["2015-12-08","openmail.com",15834,4477,11356,28.27,12021,3430,8591,28.53,16907,524,288.45,0.02,0.02,0.02,0.55,3.31],
+	["2015-12-07","openmail.com",217559,61523,156036,28.28,165173,47131,118041,28.53,232307,7201,31895.98,0.15,0.14,0.19,4.43,3.31],
+	["2015-12-06","openmail.com",201890,57092,144797,28.28,153276,43737,109539,28.53,215575,6683,8438.28,0.04,0.04,0.06,1.26,3.31],
+	["2015-12-05","openmail.com",11491,3249,8241,28.27,8724,2489,6234,28.53,12269,380,837.1,0.07,0.07,0.1,2.2,3.31],
+	["2015-12-04","openmail.com",644322,182207,462115,28.28,489174,139585,349589,28.53,687999,21328,24539.44,0.04,0.04,0.05,1.15,3.31],
+	["2015-12-03","openmail.com",114580,32402,82178,28.28,86990,24822,62167,28.53,122347,3792,2036.99,0.02,0.02,0.02,0.54,3.31],
+	["2015-12-02","openmail.com",718986,203321,515665,28.28,545860,155760,390099,28.53,767724,23800,94094.46,0.13,0.12,0.17,3.95,3.31]
+	]
+
+	return(jsonify(test_data))
 
 if __name__ =="__main__":
 	app.run(debug = True)
